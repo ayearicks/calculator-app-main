@@ -1,0 +1,57 @@
+:root {
+    // Theme 1
+
+    // Backgrounds
+    --DarkBlueMain: hsl(222, 26%, 31%);
+    --DarkBlueToggle: hsl(223, 31%, 20%);
+    --DarkBlueScreen: hsl(224, 36%, 15%);
+    // Keys
+    --DesatBlueKeyBack: hsl(225, 21%, 49%);
+    --DesatBlueKeyShadow: hsl(224, 28%, 35%);
+    --RedKeyToggle: hsl(6, 63%, 50%);
+    --RedKeyShadow: hsl(6, 70%, 34%);
+    --GrayOrangeBack: hsl(30, 25%, 89%);
+    --GrayOrangeShadow: hsl(28, 16%, 65%);
+    //Text
+    --DarkGrayBlue: hsl(221, 14%, 31%);
+    --White: hsl(0, 0, 100%);
+}
+
+body {
+    font-family: 'Spartan', sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    background-color:  var(--DarkBlueMain);
+}
+
+.calculator {
+    margin: 0 auto;   
+    padding: 0;
+
+    
+    #logo-theme-select {
+        display: flex;
+        flex-wrap: nowrap;
+
+        h1 {
+            color: var(--White);
+            color: #fff;
+            text-transform: lowercase;
+        }
+    }
+}
+
+
+
+
+
+
+
+    .attribution { 
+        font-size: 11px; 
+        text-align: center; 
+    }
+
+    .attribution a { 
+        color: hsl(228, 45%, 44%); 
+    }
