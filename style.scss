@@ -14,7 +14,6 @@
     --GrayOrangeShadow: hsl(28, 16%, 65%);
     //Text
     --DarkGrayBlue: hsl(221, 14%, 31%);
-    --White: hsl(0, 0, 100%);
 }
 
 body {
@@ -32,13 +31,125 @@ body {
     #logo-theme-select {
         display: flex;
         flex-wrap: nowrap;
+        justify-content: space-between;
 
         h1 {
-            color: var(--White);
-            color: #fff;
+            color: white;
+            font-size: 32px;
             text-transform: lowercase;
         }
+
+        #theme-selector {
+            display: flex;
+            flex-wrap: nowrap;
+
+            h2 {
+                color: white;
+                font-size: 14px;
+                text-transform: uppercase;
+            }
+
+            #slider {
+                display: flex;
+                flex-wrap: nowrap;
+                flex-direction: row;
+
+                #selectors {
+                    display: flex;
+                    flex-wrap: nowrap;
+                    flex-direction: row;
+                    justify-content: space-evenly;
+
+                    p {
+                        color: white;
+                        font-size: 14px;
+                    }
+                }
+            }
+
+
+        }
+
+
+
+
+
     }
+
+    #results {
+        margin: 0 auto;
+        width: 90%;
+        background-color: var(--DarkBlueScreen);
+        height: 5rem;
+        border-radius: 10px;
+
+        #number-result {
+            display: flex;
+            justify-content: end;
+            padding: 1.5rem;
+            color: white;
+        }
+    }
+
+    #interface {
+        background-color: var(--DarkBlueScreen);
+        border-radius: 10px;
+        margin: 2rem auto;
+        padding: .5rem;
+        width: 90%;
+        min-height: 60vh;
+
+        .row {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: 5;
+        }
+
+        .btn {
+            color: var(--DarkGrayBlue);
+            background-color: var(--GrayOrangeBack);
+            padding: .5rem 1rem;
+            border-radius: 5px;
+            margin: .7rem;
+            box-shadow: 0 6px var(--GrayOrangeShadow);
+            cursor: pointer;
+        }
+
+        .btn:active, #del:active, #reset:active, #equal:active {
+            box-shadow: none;
+            top: 6px;
+        }
+        
+        #del, #reset {
+            color: white;
+            background-color: var(--DesatBlueKeyBack);
+            font-size: 16px;
+            padding: 1rem;
+            box-shadow: 0 6px var(--DesatBlueKeyShadow);
+        }
+
+        #reset {
+            padding: 1.5rem 3rem;
+        }
+
+        #equal {
+            font-size: 16px;
+            padding: 1.5rem 3.7rem;
+            color: white;
+            background-color: var(--RedKeyToggle);
+            box-shadow: 0 6px var(--RedKeyShadow);
+        }
+
+    }
+
+
+
+
+
+
+
+
+
 }
 
 

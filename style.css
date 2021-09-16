@@ -9,7 +9,6 @@
   --GrayOrangeBack: hsl(30, 25%, 89%);
   --GrayOrangeShadow: hsl(28, 16%, 65%);
   --DarkGrayBlue: hsl(221, 14%, 31%);
-  --White: hsl(0, 0, 100%);
 }
 
 body {
@@ -30,12 +29,137 @@ body {
   display: flex;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .calculator #logo-theme-select h1 {
-  color: var(--White);
-  color: #fff;
+  color: white;
+  font-size: 32px;
   text-transform: lowercase;
+}
+
+.calculator #logo-theme-select #theme-selector {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+.calculator #logo-theme-select #theme-selector h2 {
+  color: white;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.calculator #logo-theme-select #theme-selector #slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.calculator #logo-theme-select #theme-selector #slider #selectors {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.calculator #logo-theme-select #theme-selector #slider #selectors p {
+  color: white;
+  font-size: 14px;
+}
+
+.calculator #results {
+  margin: 0 auto;
+  width: 90%;
+  background-color: var(--DarkBlueScreen);
+  height: 5rem;
+  border-radius: 10px;
+}
+
+.calculator #results #number-result {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  padding: 1.5rem;
+  color: white;
+}
+
+.calculator #interface {
+  background-color: var(--DarkBlueScreen);
+  border-radius: 10px;
+  margin: 2rem auto;
+  padding: .5rem;
+  width: 90%;
+  min-height: 60vh;
+}
+
+.calculator #interface .row {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  -ms-grid-rows: 5;
+      grid-template-rows: 5;
+}
+
+.calculator #interface .btn {
+  color: var(--DarkGrayBlue);
+  background-color: var(--GrayOrangeBack);
+  padding: .5rem 1rem;
+  border-radius: 5px;
+  margin: .7rem;
+  -webkit-box-shadow: 0 6px var(--GrayOrangeShadow);
+          box-shadow: 0 6px var(--GrayOrangeShadow);
+  cursor: pointer;
+}
+
+.calculator #interface .btn:active, .calculator #interface #del:active, .calculator #interface #reset:active, .calculator #interface #equal:active {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  top: 6px;
+}
+
+.calculator #interface #del, .calculator #interface #reset {
+  color: white;
+  background-color: var(--DesatBlueKeyBack);
+  font-size: 16px;
+  padding: 1rem;
+  -webkit-box-shadow: 0 6px var(--DesatBlueKeyShadow);
+          box-shadow: 0 6px var(--DesatBlueKeyShadow);
+}
+
+.calculator #interface #reset {
+  padding: 1.5rem 3rem;
+}
+
+.calculator #interface #equal {
+  font-size: 16px;
+  padding: 1.5rem 3.7rem;
+  color: white;
+  background-color: var(--RedKeyToggle);
+  -webkit-box-shadow: 0 6px var(--RedKeyShadow);
+          box-shadow: 0 6px var(--RedKeyShadow);
 }
 
 .attribution {
