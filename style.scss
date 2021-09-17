@@ -23,6 +23,7 @@ body {
     background-color:  var(--DarkBlueMain);
 }
 
+
 .calculator {
     margin: 0 auto;   
     padding: 0;
@@ -39,46 +40,7 @@ body {
             text-transform: lowercase;
         }
 
-        #theme-selector {
-            display: flex;
-            flex-wrap: nowrap;
-            justify-content: space-between;
-            width: 150px;
-            align-items: center;
-
-            h2 {
-                color: white;
-                font-size: 14px;
-                text-transform: uppercase;
-            }
-
-            #slider {
-                display: flex;
-                flex-wrap: nowrap;
-                flex-direction: column-reverse;
-                background-color: var(--DarkBlueToggle);
-                width: 60px;
-                height: 25px;
-                border-radius: 30px;
-
-                #selectors {
-                    display: flex;
-                    flex-wrap: nowrap;
-                    flex-direction: row;
-                    justify-content: space-evenly;
-
-                    p {
-                        color: white;
-                        font-size: 12px;
-                    }
-                }
-            }
-
-
-        }
-
-
-
+    }
 
 
     }
@@ -148,21 +110,6 @@ body {
         }
 
     }
-
-
-
-
-
-
-
-
-
-}
-
-
-
-
-
 
 
     .attribution { 
