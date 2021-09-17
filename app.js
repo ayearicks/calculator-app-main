@@ -1,124 +1,31 @@
-// On document load, before other resources
 document.addEventListener('DOMContentLoaded', () => {
+    let calculator = Array.from(document.querySelectorAll('.btn'));
+    let display = document.getElementById("number-result");
 
-    const btn = document.querySelectorAll('.btn');
-    const reset = document.querySelector('#reset');
-    const erase = document.getElementById("del");
+    calculator.map(number => {
+        number.addEventListener('click', (ev) => {
+            switch(ev.target.innerText) {
 
-    // Number display
-    const output = document.getElementById('number-result');
+                case 'RESET':
+                    display.innerText = ' ';
+                    break;
+                case 'DEL':
+                    display.innerText = display.innerText.slice(0, -1);
+                    break;
+                case 'x':
+                    display.innerText = display.innerText + '*'
+                    break;
+                case '=':
+                    try {
+                        display.innerText = eval(display.innerText);
+                    } catch {
+                        display.innerText = 'Invalid';
+                    }
+                    break;
 
-    // Add click events to all buttons
-    for (let i = 0; i < btn.length; i++) {
-
-        btn[i].addEventListener('click', function() {
-            if (btn[i] === '+') {
-
-            } else if (btn[i] === '-') {
-
-            } else if (btn[i] === '/') {
-
-            } else if (btn[i] === 'x') {
-
-            } else if (btn[i] === '.') {
-
-            } else if (btn[i] === 'del') {
-
-            } else if (btn[i] === 'reset') {
-                
-            } else if (btn[i] === '=') {
-
+                default: display.innerText += ev.target.innerText;
             }
         })
-
-
-    //     if (btn[i].innerHTML === '+') {
-    //         btn[i].addEventListener('click', addition )
-
-    //     } else if (btn[i].innerHTML === '*') {
-
-    //     } else if (btn[i].innerHTML === '/') {
-
-    //     } else if (btn[i].innerHTML === '-') {
-
-    //     }
-    //    if (btn[i].innerHTML === '=') {
-    //         btn[i].addEventListener('click', calculate(holder))
-    //     } else if (btn[i].innerHTML === "+")
-    //     {
-    //     } else {
-    //         btn[i].addEventListener('click', holder); 
-    //     }
-    }
-    const calculate = () => {
-
-        
-    }
-    
-    // Delete one number at a time
-    const erase = () => {
-        output.textContent = output.textContent.substring(0, output.textContent.length - 1);
-    }
-
-    // Delete all waiting numbers
-    const clear = () => {
-        output.textContent = '';
-    }
-
-    // const reset = document.querySelector('#reset');
-    // const output = document.querySelector("#number-result");
-    // const expression = {
-    //     display: '0',
-    //     firstInput: null,
-    //     secondInputEntered: false,
-    //     secondInput: null,
-    //     operator: null
-    // }
-    // const updateDisplay = () => {
-    //     output.appendChild(expression.display);
-    //     console.log(expression.display)
-    // }
-
-    // updateDisplay()
-
-
-    
-    
-    
-
-}
-
-    
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    })
 
 });

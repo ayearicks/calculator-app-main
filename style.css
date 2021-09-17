@@ -46,6 +46,13 @@ body {
   display: flex;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 150px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .calculator #logo-theme-select #theme-selector h2 {
@@ -60,10 +67,14 @@ body {
   display: flex;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  background-color: var(--DarkBlueToggle);
+  width: 60px;
+  height: 25px;
+  border-radius: 30px;
 }
 
 .calculator #logo-theme-select #theme-selector #slider #selectors {
@@ -83,7 +94,7 @@ body {
 
 .calculator #logo-theme-select #theme-selector #slider #selectors p {
   color: white;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 .calculator #results {
@@ -106,7 +117,7 @@ body {
 }
 
 .calculator #interface {
-  background-color: var(--DarkBlueScreen);
+  background-color: var(--DarkBlueToggle);
   border-radius: 10px;
   margin: 2rem auto;
   padding: .5rem;
