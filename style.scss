@@ -2,53 +2,81 @@
     // Theme 1
 
     // Backgrounds
-    --DarkBlueMain: hsl(222, 26%, 31%);
-    --DarkBlueToggle: hsl(223, 31%, 20%);
-    --DarkBlueScreen: hsl(224, 36%, 15%);
+    --MainBackground: hsl(222, 26%, 31%);
+    --ToggleBackground: hsl(223, 31%, 20%);
+    --ScreenBackground: hsl(224, 36%, 15%);
     // Keys
-    --DesatBlueKeyBack: hsl(225, 21%, 49%);
-    --DesatBlueKeyShadow: hsl(224, 28%, 35%);
-    --RedKeyToggle: hsl(6, 63%, 50%);
-    --RedKeyShadow: hsl(6, 70%, 34%);
-    --GrayOrangeBack: hsl(30, 25%, 89%);
-    --GrayOrangeShadow: hsl(28, 16%, 65%);
+    --KeyBackground: hsl(225, 21%, 49%);
+    --KeyShadow: hsl(224, 28%, 35%);
+    --KeyToggle: hsl(6, 63%, 50%);
+    --ThemeKeyShadow: hsl(6, 70%, 34%);
+    --DarkKeyBackground: hsl(30, 25%, 89%);
+    --DarkKeyShadow: hsl(28, 16%, 65%);
     //Text
-    --DarkGrayBlue: hsl(221, 14%, 31%);
+    --Text: hsl(221, 14%, 31%);
+
+    //Theme 2
+    --MainBackground2: hsl(0, 0%, 90%);
+    --ToggleBackground2: hsl(0, 5%, 81%);
+    --ScreenBackground2: hsl(0, 0%, 93%);
+    --KeyBackground2: hsl(185, 42%, 37%);
+    --KeyShadow2: hsl(185, 58%, 25%);
+    --KeyToggle2: hsl(25, 98%, 40%);
+    --ThemeKeyShadow2: hsl(25, 99%, 27%);
+    --DarkKeyBackground2: hsl(45, 7%, 89%);
+    --DarkKeyShadow2: hsl(35, 11%, 61%);
+    --Text2: hsl(60, 10%, 19%);
+
+    //Theme 3
+    --MainBackground3: hsl(268, 75%, 9%);
+    --ToggleBackground3: hsl(268, 71%, 12%);
+    --ScreenBackground3: hsl(268, 71%, 12%);
+    --KeyBackground3: hsl(281, 89%, 26%);
+    --KeyShadow3: hsl(285, 91%, 52%);
+    --KeyToggle3:hsl(176, 100%, 44%);
+    --ThemeKeyShadow3: hsl(177, 92%, 70%);
+    --DarkKeyBackground3: hsl(268, 47%, 21%);
+    --DarkKeyShadow3: hsl(290, 70%, 36%);
+    --Text3: hsl(52, 100%, 62%);
+    --Text4: hsl(198, 20%, 13%);
+}
+
+* {
+	box-sizing: border-box;
 }
 
 body {
     font-family: 'Spartan', sans-serif;
     font-weight: 700;
     font-size: 32px;
-    background-color:  var(--DarkBlueMain);
+    background-color:  var(--MainBackground);
 }
 
 
 .calculator {
     margin: 0 auto;   
     padding: 0;
+    max-height: 100vh;
 
     
     #logo-theme-select {
+        position: relative;
         display: flex;
-        flex-wrap: nowrap;
         justify-content: space-between;
-
+        
         h1 {
             color: white;
             font-size: 32px;
             text-transform: lowercase;
         }
-
     }
+}
 
-
-    }
 
     #results {
         margin: 0 auto;
         width: 90%;
-        background-color: var(--DarkBlueScreen);
+        background-color: var(--ScreenBackground);
         height: 5rem;
         border-radius: 10px;
 
@@ -61,12 +89,12 @@ body {
     }
 
     #interface {
-        background-color: var(--DarkBlueToggle);
+        background-color: var(--ToggleBackground);
         border-radius: 10px;
         margin: 2rem auto;
         padding: .5rem;
         width: 90%;
-        min-height: 60vh;
+        min-height: 50vh;
 
         .row {
             display: grid;
@@ -75,12 +103,12 @@ body {
         }
 
         .btn {
-            color: var(--DarkGrayBlue);
-            background-color: var(--GrayOrangeBack);
+            color: var(--Text);
+            background-color: var(--DarkKeyBackground);
             padding: .5rem 1rem;
             border-radius: 5px;
             margin: .7rem;
-            box-shadow: 0 6px var(--GrayOrangeShadow);
+            box-shadow: 0 6px var(--DarkKeyShadow);
             cursor: pointer;
         }
 
@@ -91,10 +119,10 @@ body {
         
         #del, #reset {
             color: white;
-            background-color: var(--DesatBlueKeyBack);
+            background-color: var(--KeyBackground);
             font-size: 16px;
             padding: 1rem;
-            box-shadow: 0 6px var(--DesatBlueKeyShadow);
+            box-shadow: 0 6px var(--KeyShadow);
         }
 
         #reset {
@@ -105,12 +133,11 @@ body {
             font-size: 16px;
             padding: 1.5rem 3.7rem;
             color: white;
-            background-color: var(--RedKeyToggle);
-            box-shadow: 0 6px var(--RedKeyShadow);
+            background-color: var(--KeyToggle);
+            box-shadow: 0 6px var(--ThemeKeyShadow);
         }
 
     }
-
 
     .attribution { 
         font-size: 11px; 

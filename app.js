@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     let calculator = Array.from(document.querySelectorAll('.btn'));
     let display = document.getElementById("number-result");
+    let toggle = document.querySelectorAll("input[type=checkbox]");
 
     calculator.map(number => {
         number.addEventListener('click', (ev) => {
@@ -26,6 +27,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 default: display.innerText += ev.target.innerText;
             }
         })
+    });
+
+    toggle.addEventListener("click", (num) => {
+
     })
+
 
 });
