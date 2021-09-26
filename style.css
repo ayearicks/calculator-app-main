@@ -86,7 +86,9 @@ body {
 }
 
 #interface {
+
   background-color: var(--ToggleBackground);
+
   border-radius: 10px;
   margin: 2rem auto;
   padding: .5rem;
@@ -104,8 +106,10 @@ body {
 }
 
 #interface .btn {
+
   color: var(--Text);
   background-color: var(--DarkKeyBackground);
+
   padding: .5rem 1rem;
   border-radius: 5px;
   margin: .7rem;
